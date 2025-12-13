@@ -1,0 +1,111 @@
+Niko’s License v4.0 (NLv4)
+Copyright © NikoYandere, 2025
+
+Summary
+
+NLv4 keeps the copyleft spirit but is more open-source friendly. It allows free use, modification, and redistribution of the Original or Derivative Work for personal, educational, and commercial purposes, while keeping proper attribution to the original author. Forks and contributions are encouraged and simplified for maximum collaboration. NLv4 aims to balance freedom for developers with recognition for the original author, ensuring a fair ecosystem for both personal projects and commercial ventures.
+
+1. Definitions
+
+Original Work: The software, codebase, or project initially released under this license. This includes all files, documentation, and other resources explicitly included in the initial release.
+
+Derivative Work: Any modification, fork, translation, enhancement, or other transformation of the Original Work, including additions, deletions, and adaptations.
+
+Licensee (You): Any person or entity using, modifying, or distributing the Work under this license. You accept the terms by simply using or distributing the software.
+
+Distribution: Any act of providing or sharing the Work with others, whether publicly or privately, digitally or physically.
+
+Commercial Distribution: Distribution involving any form of financial gain, such as selling the Work, offering paid features, or including it in monetized services.
+
+Declared Fork: A Derivative Work clearly stating it is a fork of the Original Work with proper attribution and acknowledgement of the original author.
+
+Platform: Any service, marketplace, or system where the Work is published, sold, or accessed. This includes digital stores, app repositories, and hosting platforms.
+
+2. Grant of Rights
+
+2.1 Use, Modify, and Study
+You may freely use, modify, and study the Original or Derivative Work for any purpose, including personal, educational, experimental, or commercial use. There are no limitations on how the Work may be utilized, enabling experimentation, innovation, and learning.
+
+2.2 Forking and Redistribution
+You are allowed to create forks, adaptations, translations, or any other form of Derivative Work. Redistribution is permitted under NLv4 as long as attribution to the original author is maintained. This encourages open collaboration while respecting the contribution of the original developer.
+
+3. Commercial Distribution
+
+3.1 Original Author Rights
+The original author retains the right to commercialize the Original Work. This ensures that the original creator can benefit from their efforts.
+
+3.2 Third-Party Forks
+Third-party developers may commercialize Declared Forks freely, without mandatory fees or royalties, provided that attribution is clear. This allows open-source developers to monetize their own versions while respecting the original work.
+
+3.3 Attribution
+Every distribution of the Work, whether commercial or non-commercial, must include:
+
+A copy of this license within the source code, or
+
+A clear statement such as “Licensed under NLv4 by NikoYandere.”
+
+3.4 Freemium Versions
+Original authors may offer freemium versions (free base version with paid features). Third-party developers may also create freemium adaptations of Derivative Works, maintaining transparency about which features are free and which are paid.
+
+4. Source Code & Openness
+
+Derivative Works must remain open-source under NLv4.
+
+The complete source code must be available whenever the Work is distributed.
+
+Modifications must be documented clearly in changelogs or accompanying documentation, ensuring transparency and helping other developers understand changes.
+
+Encourages collaboration and learning, fostering a community of developers contributing improvements back to the ecosystem.
+
+5. Attribution
+
+All copies of the Work must retain original copyright notices.
+
+Derivative Works must credit the original author in a clear manner, such as in documentation, headers, or project descriptions.
+
+The full license text must accompany any distribution to ensure that downstream users are aware of their rights and responsibilities.
+
+6. Warranty & Liability
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT ANY WARRANTY.
+The authors or contributors cannot be held liable for any damages, loss of data, or other consequences arising from using the Work. Users are responsible for testing, verifying, and using the software safely.
+
+7. Termination
+
+Violation of any license terms will immediately terminate your rights under NLv4. Upon termination, you must cease distribution and commercialization of the Work or any derivative.
+
+8. Governing Law
+
+NLv4 is governed by the laws of the jurisdiction of the original copyright holder. This applies to disputes, enforcement, and legal interpretation of the license.
+
+9. Contributions
+
+Contributions from third parties are incorporated under NLv4.
+
+Contributors retain credit for their work.
+
+The original author may use contributions in commercial or non-commercial versions without additional permission.
+
+10. Patent Grant
+
+NLv4 includes a royalty-free, non-exclusive patent grant for use of the software.
+
+Patent claims made against the original holder or contributors regarding the Work will automatically void this license for the claimant.
+
+11. Trademarks
+
+No trademark rights are granted. Use of names, logos, or branding requires separate explicit permission from the owner.
+
+12. SaaS / Network Use
+
+Providing the Work as a service (Software as a Service – SaaS) is not considered distribution. However, license and attribution information must be accessible to users. This ensures transparency and recognition even in networked applications or cloud services.
+
+13. Encouragement of Community & Collaboration
+
+NLv4 strongly encourages community collaboration, sharing improvements, and contributing to open-source development. Developers are invited to build on the Work, create educational resources, or contribute back to the original project, fostering a healthy and open ecosystem for innovation.
+
+14. Severability
+
+If any part of this license is found invalid, the rest of the license remains in full effect.
+
+End of Niko’s License Version 4.0 (NLv4)
