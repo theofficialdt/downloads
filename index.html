@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Downloads</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+  }
+
+  h1 {
+    color: #4caf50;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background: #333;
+    margin: 10px auto;
+    padding: 15px;
+    width: 300px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  li:hover {
+    background: #4caf50;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<h1>Download List</h1>
+<ul id="file-list"></ul>
+
+<script>
+const user = "theofficialdt";
+const repo = "theofficialdt.github.io";
+const path = "downloads";
+
+fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
+  .then(response => response.json())
+  .then(data => {
+    const ul = document.getElementById('file-list');
+    data.forEach(file => {
+      if(file.type === "file") {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = file.download_url;
+        link.textContent = file.name;
+        link.target = "_blank";
+        li.appendChild(link);
+        ul.appendChild(li);
+      }
+    });
+  })
+  .catch(err => {
+    console.error('Error fetching files:', err);
+    const ul = document.getElementById('file-list');
+    ul.innerHTML = "<li>Unable to load files.</li>";
+  });
+</script>
+</body>
+</html>
