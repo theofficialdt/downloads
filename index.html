@@ -1,33 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Download List</title>
+<title>Yanix Launcher Official Download List (1.x)</title>
+<style>
+  body { font-family: monospace; background: #f5f5f5; color: #333; padding: 20px; }
+  h1 { font-size: 24px; margin-bottom: 20px; }
+  ul { list-style: none; padding-left: 0; }
+  li { margin: 5px 0; }
+  a { text-decoration: none; color: #0366d6; }
+  a:hover { text-decoration: underline; }
+  .folder::before { content: "📁 "; }
+  .file::before { content: "📄 "; }
+  #path { margin-bottom: 10px; }
+</style>
 </head>
 <body>
-  <h1>Download List</h1>
-  <ul id="fileList"></ul>
+<h1>Yanix Launcher Official Download List (1.x)</h1>
+<div id="path">/</div>
+<ul id="fileList"></ul>
 
-  <script>
-    const user = "theofficialdt"; 
-    const repo = "downloads"; 
-    const pathDir = ""; 
+<script>
+  const user = "theofficialdt"; 
+  const repo = "downloads"; 
 
-    const url = `https://api.github.com/repos/${user}/${repo}/contents/${pathDir}`;
+  let currentPath = "";
 
+  function loadFiles(path) {
+    const url = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
     fetch(url)
       .then(res => res.json())
       .then(data => {
         const list = document.getElementById("fileList");
+        const pathDiv = document.getElementById("path");
+        list.innerHTML = "";
+        pathDiv.textContent = "/" + path;
+
+        if (path) {
+          const li = document.createElement("li");
+          li.className = "folder";
+          const link = document.createElement("a");
+          link.href = "#";
+          link.textContent = "..";
+          link.onclick = () => {
+            const parts = path.split("/").filter(p => p);
+            parts.pop();
+            currentPath = parts.join("/");
+            loadFiles(currentPath);
+          };
+          li.appendChild(link);
+          list.appendChild(li);
+        }
+
         data.forEach(item => {
           const li = document.createElement("li");
-          li.innerHTML = `<a href="${item.download_url}" target="_blank">${item.name}</a>`;
+          li.className = item.type;
+          const link = document.createElement("a");
+          link.textContent = item.name + (item.type === "dir" ? "/" : "");
+          if(item.type === "dir") {
+            link.href = "#";
+            link.onclick = () => {
+              currentPath = path ? `${path}/${item.name}` : item.name;
+              loadFiles(currentPath);
+            };
+          } else {
+            link.href = item.download_url;
+            link.target = "_blank";
+          }
+          li.appendChild(link);
           list.appendChild(li);
         });
       })
-      .catch(err => {
-        console.error("Erro ao listar arquivos:", err);
-      });
-  </script>
+      .catch(err => console.error("Error loading files:", err));
+  }
+
+  loadFiles(currentPath);
+</script>
 </body>
 </html>
